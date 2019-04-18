@@ -24,4 +24,4 @@ appData.expenses[mandExpenses] = howMuch;
 
 let budget_one_day = +money/30;
 
-console.log('Бюджет на 1 день =', budget_one_day);
+alert('Бюджет на 1 день = ' + budget_one_day.toFixed(2));
