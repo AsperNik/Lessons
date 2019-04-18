@@ -11,7 +11,7 @@ let appData = {
     optionalExpanses:{},
     income:{},
     savings: false
-}
+};
 
 let mandExpenses = prompt('Введите обязательную статью расходов в этом месяце'),
     howMuch = prompt('Во сколько обойдется?');
