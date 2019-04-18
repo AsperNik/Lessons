@@ -1,3 +1,4 @@
+function main() {
 'use strict'
 
 let num = 33721,
@@ -14,3 +15,4 @@ mult = mult ** 3;
 let f2 = String(mult).split('');
 alert(f2[0] + f2[1]);
 
+}

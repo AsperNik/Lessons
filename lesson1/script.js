@@ -1,3 +1,4 @@
+function main(){
 'use strict';
 
 let money = prompt('Ваш бюджет на месяц'),
@@ -25,3 +26,4 @@ appData.expenses[mandExpenses] = howMuch;
 let budget_one_day = +money/30;
 
 alert('Бюджет на 1 день = ' + budget_one_day.toFixed(2));
+}
