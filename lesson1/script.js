@@ -9,7 +9,7 @@ let appData = {
     timeData: time,
     expenses: {},
     optionalExpanses:{},
-    income:{},
+    income:[],
     savings: false
 };
 
