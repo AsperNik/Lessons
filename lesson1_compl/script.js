@@ -1,5 +1,5 @@
 function main() {
-'use strict'
+'use strict';
 
 let num = 33721,
     mult = 1;
