@@ -19,8 +19,8 @@ function main() {
     let a = prompt('Введите обязательную статью расходов в этом месяце', ''),
         b = prompt('Во сколько обойдется?', '');
     
-    if ( (typeof(a)=== 'string') && (typeof(a) != null) && 
-    (typeof(b) != null) && a!= '' && b != '' && a.length < 50 ) {
+    if ( (typeof(a)=== 'string') && (a != null) && 
+    (b != null) && a!= '' && b != '' && a.length < 50 ) {
             
             appData.expenses[a] = b;
                     
@@ -40,8 +40,8 @@ function main() {
     // let a = prompt('Введите обязательную статью расходов в этом месяце', ''),
     //     b = prompt('Во сколько обойдется?', '');
         
-    //     if ( ( typeof(a)=== 'string' ) && ( typeof(a) != null ) && 
-    //     ( typeof(b) != null ) && a!= '' && b != '' && a.length < 50 ) {
+    //     if ( ( typeof(a)=== 'string' ) && ( a != null ) && 
+    //     ( b != null ) && a!= '' && b != '' && a.length < 50 ) {
     //         i++;     
     //         appData.expenses[a] = b;
                         
@@ -58,8 +58,8 @@ function main() {
     // let a = prompt('Введите обязательную статью расходов в этом месяце', ''),
     //     b = prompt('Во сколько обойдется?', '');
             
-    //     if ( ( typeof(a)=== 'string' ) && ( typeof(a) != null ) && 
-    //     ( typeof(b) != null ) && a!= '' && b != '' && a.length < 50 ) {
+    //     if ( ( typeof(a)=== 'string' ) && ( a != null ) && 
+    //     ( b != null ) && a!= '' && b != '' && a.length < 50 ) {
     //         i++;        
     //         appData.expenses[a] = b;
                             
