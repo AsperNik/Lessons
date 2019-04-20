@@ -16,11 +16,11 @@ function main() {
 
     for (let i = 0; i < 2; i++) {
 
-    let a = prompt('Введите обязательную статью расходов в этом месяце', ''),
+        let a = prompt('Введите обязательную статью расходов в этом месяце', ''),
         b = prompt('Во сколько обойдется?', '');
     
-    if ( (typeof(a)=== 'string') && (a != null) && 
-    (b != null) && a!= '' && b != '' && a.length < 50 ) {
+        if ( (typeof(a)=== 'string') && (a != null) && 
+        (b != null) && a!= '' && b != '' && a.length < 50 ) {
             
             appData.expenses[a] = b;
                     
