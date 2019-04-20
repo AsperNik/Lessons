@@ -27,3 +27,5 @@ let budget_one_day = +money/30;
 
 alert('Бюджет на 1 день = ' + budget_one_day.toFixed(2));
 }
+
+main();
