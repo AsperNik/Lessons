@@ -14,18 +14,18 @@ function main() {
         savings: false
     };
 
-     for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < 2; i++) {
 
     let a = prompt('Введите обязательную статью расходов в этом месяце', ''),
         b = prompt('Во сколько обойдется?','');
     
-        if ( (typeof(a))=== 'string' && (typeof(a)) != null && 
-        (typeof(b)) != null && a!= '' && b != '' && a.length < 50 ) {
+    if ( (typeof(a)=== 'string') && (typeof(a) != null) && 
+    (typeof(b) != null) && a!= '' && b != '' && a.length < 50 ) {
             
             appData.expenses[a] = b;
                     
         } else {
-            alert('Обязательно к заполнению!');
+            alert('Ошибка !');
             i--;
             continue;
         }
@@ -35,52 +35,50 @@ function main() {
     // let i = 0;
 
     
-    /* while (i < 2) {
+    // while (i < 2) {
 
-    let a = prompt('Введите обязательную статью расходов в этом месяце', ''),
-        b = prompt('Во сколько обойдется?','');
+    // let a = prompt('Введите обязательную статью расходов в этом месяце', ''),
+    //     b = prompt('Во сколько обойдется?','');
         
-        if ( (typeof(a))=== 'string' && (typeof(a)) != null && 
-        (typeof(b)) != null && a!= '' && b != '' && a.length < 50 ) {
-                
-            appData.expenses[a] = b;
+    //     if ( ( typeof(a)=== 'string' ) && ( typeof(a) != null ) && 
+    //     ( typeof(b) != null ) && a!= '' && b != '' && a.length < 50 ) {
+    //         i++;     
+    //         appData.expenses[a] = b;
                         
-        } else {
-            alert('Обязательно к заполнению!');
-            i--;
-            continue;
-        }
-        i++;
-    }  */
+    //     } else {
+    //         alert('Ошибка !');
+    //         continue;
+    //     }
+        
+    // }
 
 
-  /*   do {
+    // do {
 
-    let a = prompt('Введите обязательную статью расходов в этом месяце', ''),
-        b = prompt('Во сколько обойдется?','');
+    // let a = prompt('Введите обязательную статью расходов в этом месяце', ''),
+    //     b = prompt('Во сколько обойдется?','');
             
-        if ( (typeof(a))=== 'string' && (typeof(a)) != null && 
-        (typeof(b)) != null && a!= '' && b != '' && a.length < 50 ) {
-                    
-            appData.expenses[a] = b;
+    //     if ( ( typeof(a)=== 'string' ) && ( typeof(a) != null ) && 
+    //     ( typeof(b) != null ) && a!= '' && b != '' && a.length < 50 ) {
+    //         i++;        
+    //         appData.expenses[a] = b;
                             
-        } else {
-            alert('Обязательно к заполнению!');
-            i--;
-            continue;
-        }
-    i++;
-    }  while (i < 2); */
+    //     } else {
+    //         alert('Ошибка !');
+    //         continue;
+    //     }
+    
+    // }  while (i < 2); 
 
 
     appData.moneyPerDay = appData.budget / 30;
 
     alert("Ежедневный бюджет = " + appData.moneyPerDay);
-    if (appData.moneyPerDay < 100 ) {
+    if ( appData.moneyPerDay < 100 ) {
         console.log('Минимальный уровень достатка');
-    } else if (appData.moneyPerDay > 100 && appData.moneyPerDay < 2000 ) {
+    } else if ( appData.moneyPerDay > 100 && appData.moneyPerDay < 2000 ) {
         console.log('Средний уровень достатка');
-    } else if (appData.moneyPerDay > 2000 ) {
+    } else if ( appData.moneyPerDay > 2000 ) {
         console.log('Высокий уровень достатка');
     } else {
         console.log('Произошла ошибка');
