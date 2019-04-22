@@ -1,6 +1,17 @@
 function main() {
     'use strict';
+
     let money, time;
+    
+    function start() {
+        money = prompt('Ваш бюджет на месяц');
+        time = prompt('Введите дату в формате YYYY-MM-DD'); 
+        while(isNaN(money) || money == "" || money == null) {
+            money = +prompt('Ваш бюджет на месяц');
+        }
+    }
+
+    start();
 
     let appData = {
         budget: money,
@@ -10,14 +21,6 @@ function main() {
         income:[],
         savings: true
     };
-
-    function start() {
-        money = prompt('Ваш бюджет на месяц');
-        time = prompt('Введите дату в формате YYYY-MM-DD'); 
-        while(isNaN(money) || money == "" || money == null) {
-            money = +prompt('Ваш бюджет на месяц');
-        }
-    }
 
     function chooseExpanses() {
         for (let i = 0; i < 2; i++) {
@@ -39,8 +42,17 @@ function main() {
         } 
     }
 
+    function chooseOptExpenses(){
+        for (let i = 0; i < 3; i++) {
+
+            let a = prompt('Статья необязательных расходов', '');
+            let b = i+1;
+            appData.optionalExpanses[b] = a;
+        }
+    }
+
     function detectDayBudget() {
-        appData.moneyPerDay = (appData.budget / 30);
+        appData.moneyPerDay = (appData.budget / 30).toFixed(2);
         alert("Ежедневный бюджет = " + appData.moneyPerDay);
     }
     
@@ -66,9 +78,10 @@ function main() {
         }
     }
 
-    start();
 
     chooseExpanses();
+
+    chooseOptExpenses();
 
     detectDayBudget();
 
@@ -76,7 +89,6 @@ function main() {
 
     checkSavings(); 
 
-    
 }
 
 main();
