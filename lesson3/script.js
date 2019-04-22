@@ -47,7 +47,16 @@ function main() {
 
             let a = prompt('Статья необязательных расходов', '');
             let b = i+1;
-            appData.optionalExpanses[b] = a;
+            
+            if ( (typeof(a)=== 'string') && (a != null) && a!= '' && a.length < 50 ) {
+                
+                appData.optionalExpanses[b] = a;
+                        
+            } else {
+                alert('Ошибка !');
+                i--;
+                continue;
+            }
         }
     }
 
