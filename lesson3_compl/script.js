@@ -20,25 +20,39 @@ for (let i = 0; i < arr.length; i++) {
 }
 console.log(Math.sqrt(sum).toFixed(2));
 
+// let text = prompt("Введите текст - ", "");
+// function redStr(text) {
+    
+//     let a = 0,
+//         b = 0;
+      
+//     if (typeof(text) === 'string') {
+//         a = text.indexOf(" ", 1);
+//         b = text.lastIndexOf(" ", 1);
+        
+//     } else {
+//         alert('Это не текст!');
+//     }
+//     text.slice(a, 1);
+//     text.slice(b, 1);
+    
+//     console.log(text);
+// }
+
+
 let text = prompt("Введите текст - ", "");
 function redStr(text) {
-    
-    let a = 0,
-        b = 0;
-      
+         
     if (typeof(text) === 'string') {
-        a = text.indexOf(" ", 1);
-        b = text.lastIndexOf(" ", 1);
-        
+    text = text.trim();
     } else {
         alert('Это не текст!');
     }
-    text.splice(a, 1);
-    text.splice(b, 1);
-    
-    console.log(text);
+    if (text.length > 50) {
+        alert('Многовато символов. Потише.');
+    }
+    console.log(text.substring(0, 50) + '...');
 }
-
 
 
 redStr(text);
