@@ -6,7 +6,8 @@ function getFriendlyNumbers(start, end) {
         return a-b;
     }
 
-    if ( isNaN(start) || isNaN(end) || (start < 0) || (end < start) || ((start + end)%1 != 0) ){
+    if ( isNaN(start) || isNaN(end) || (typeof(start) === "string") || (typeof(end) === "string")
+     || (start < 0) || (end < start) || ((start + end)%1 != 0) ){
         return console.log(false);
     }
     if (start == end) {
@@ -29,7 +30,7 @@ function getFriendlyNumbers(start, end) {
             }
         }
         
-        if ((start == s1) && (s0 != start)) {
+        if ((start == s1) && (s0 != start) && (start < s0)) {
             pareNum.push(start,s0); 
             pareNum = pareNum.sort(sortMass);
             friendlyNum.push(pareNum); 
@@ -46,4 +47,4 @@ function getFriendlyNumbers(start, end) {
  
     console.log(friendlyNum);
 }
-getFriendlyNumbers(1, 1);
+getFriendlyNumbers(284, 500);
