@@ -55,20 +55,18 @@
     color:#262626;
     text-align:center
 }
-
 .data .choose-income,.data .choose-percent,.data .choose-sum,.data .expenses-item,.data .optionalexpenses-item{
     height:35px;
     width:calc((100%/2) - 4px);
     border-radius:5px;
     background-color:#fff;
-    box-shadow:0 2.5px 10px 0 rgba(19, 16, 226, 0.1);
+    box-shadow:0 2.5px 10px 0 rgba(1,0,42,.1);
     border:none;
     padding-left:10px;
     margin-bottom:10px;
     font-size:14px;
     color:#a7a7a7
 }
-
 .data .choose-income::-webkit-input-placeholder,.data .choose-percent::-webkit-input-placeholder,.data .choose-sum::-webkit-input-placeholder,.data .expenses-item::-webkit-input-placeholder,.data .optionalexpenses-item::-webkit-input-placeholder{
     opacity:.3
 }
@@ -88,7 +86,7 @@
     margin:0 auto;
     border:none;
     border-radius:2.5px;
-    background-image:linear-gradient(336deg,#cecece,#2c2c2c),linear-gradient(#fff,#fff);
+    background-image:linear-gradient(336deg,#ffbd75,#ff964b),linear-gradient(#fff,#fff);
     box-shadow:0 2.5px 10px 0 rgba(1,0,42,.1);
     color:#fff;
     font-weight:100;
@@ -125,7 +123,7 @@
     margin:0 auto;
     border:none;
     border-radius:2.5px;
-    background-image:linear-gradient(336deg,#030202,#463f3a),linear-gradient(#fff,#fff);
+    background-image:linear-gradient(336deg,#ffbd75,#ff964b),linear-gradient(#fff,#fff);
     box-shadow:0 2.5px 10px 0 rgba(1,0,42,.1);
     color:#fff;
     font-weight:100;
@@ -150,8 +148,7 @@
     margin-top:42px;
     padding:25px;
     background-color:#fff;
-    box-shadow:0 1.5px 20px 0 rgba(24, 20, 255, 0.1);
-    border-radius: 15px;
+    box-shadow:0 1.5px 20px 0 rgba(1,0,42,.1)
 }
 .result-table .budget,.result-table .budget-value,.result-table .daybudget,.result-table .daybudget-value,.result-table .expenses,.result-table .expenses-value,.result-table .income,.result-table .income-value,.result-table .level,.result-table .level-value,.result-table .monthsavings,.result-table .monthsavings-value,.result-table .optionalexpenses,.result-table .optionalexpenses-value,.result-table .yearsavings,.result-table .yearsavings-value{
     width:48%;
@@ -161,7 +158,7 @@
     font-weight:500
 }
 .result-table .budget-value,.result-table .daybudget-value,.result-table .expenses-value,.result-table .income-value,.result-table .level-value,.result-table .monthsavings-value,.result-table .optionalexpenses-value,.result-table .yearsavings-value{
-    color:#ff0015;
+    color:#61a654;
     word-break:break-word
 }
 .result .time-data{
@@ -169,8 +166,7 @@
     margin:0 auto;
     display:flex;
     justify-content:space-around;
-    margin-top:40px;
-    border-radius: 15px;
+    margin-top:40px
 }
 .result .time-data .day,.result .time-data .month,.result .time-data .year{
     font-size:16px;
