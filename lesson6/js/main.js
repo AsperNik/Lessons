@@ -35,11 +35,10 @@ let appData = {
 
 let sum = 0;
 
+// Отключение кнопок
 butConfirmExp.disabled = true;
 butConfirmOptExp.disabled = true;
 butCalc.disabled = true;
-
-
 
 //Старт рассчета
 btnStart.addEventListener('click', function() {
@@ -63,8 +62,8 @@ btnStart.addEventListener('click', function() {
     //Проверка на заполнение inputExpenses(обязательные расходы)
     for (let i = 0; i < inputsExpenses.length; i++){
         inputsExpenses[i].addEventListener('input', function(){
-            for (let i = 0; i < inputsExpenses.length; i++){
-                if (inputsExpenses[i].value != '') {
+            for (let j = 0; j < inputsExpenses.length; j++){
+                if (inputsExpenses[j].value != '') {
                     butConfirmExp.disabled = false;
                 };
             };
@@ -75,8 +74,8 @@ btnStart.addEventListener('click', function() {
     //Проверка на заполнение optionExpensesInp(необязательные расходы)
     for (let i = 0; i < optionExpensesInp.length; i++){
         optionExpensesInp[i].addEventListener('input', function(){
-            for (let i = 0; i < optionExpensesInp.length; i++){
-                if (optionExpensesInp[i].value != '') {
+            for (let j = 0; j < optionExpensesInp.length; j++){
+                if (optionExpensesInp[j].value != '') {
                     butConfirmOptExp.disabled = false;
                 };
             };
@@ -104,6 +103,14 @@ butConfirmExp.addEventListener('click', function(){
     expensesValue.textContent = sum;
 });
 
+//Только цифры в поля с ценами ↑
+for (let i = 0; i < inputsExpenses.length; i++){
+    i++;
+    inputsExpenses[i].addEventListener('input',function(){
+        inputsExpenses[i].value = inputsExpenses[i].value.replace(/[^0-9]/,'');
+});
+};
+
 //Необязательные расходы
 butConfirmOptExp.addEventListener('click', function() {
     optExpValue.textContent = '';
@@ -114,6 +121,13 @@ butConfirmOptExp.addEventListener('click', function() {
         
     }
 });
+
+//Только русские буквы ↑
+for (let i = 0; i < optionExpensesInp.length; i++){
+    optionExpensesInp[i].addEventListener('input',function(){
+    optionExpensesInp[i].value = optionExpensesInp[i].value.replace(/[^а-я]/,'');
+});
+};
 
 // Рассчет уровня достатка и бюдж на 1 день
 butCalc.addEventListener('click', function() {
