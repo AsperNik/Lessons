@@ -65,11 +65,11 @@ btnStart.addEventListener('click', function() {
             for (let j = 0; j < inputsExpenses.length; j++){
                 if (inputsExpenses[j].value != '') {
                     butConfirmExp.disabled = false;
-                };
-            };
+                }
+            }
         });
         
-    };
+    }
 
     //Проверка на заполнение optionExpensesInp(необязательные расходы)
     for (let i = 0; i < optionExpensesInp.length; i++){
@@ -77,11 +77,11 @@ btnStart.addEventListener('click', function() {
             for (let j = 0; j < optionExpensesInp.length; j++){
                 if (optionExpensesInp[j].value != '') {
                     butConfirmOptExp.disabled = false;
-                };
-            };
+                }
+            }
         });
         
-    };
+    }
 
 });
 
@@ -109,7 +109,7 @@ for (let i = 0; i < inputsExpenses.length; i++){
     inputsExpenses[i].addEventListener('input',function(){
         inputsExpenses[i].value = inputsExpenses[i].value.replace(/[^0-9]/,'');
 });
-};
+}
 
 //Необязательные расходы
 butConfirmOptExp.addEventListener('click', function() {
@@ -127,7 +127,7 @@ for (let i = 0; i < optionExpensesInp.length; i++){
     optionExpensesInp[i].addEventListener('input',function(){
     optionExpensesInp[i].value = optionExpensesInp[i].value.replace(/[^а-я]/,'');
 });
-};
+}
 
 // Рассчет уровня достатка и бюдж на 1 день
 butCalc.addEventListener('click', function() {
@@ -136,7 +136,7 @@ butCalc.addEventListener('click', function() {
         dayBudgetValue.textContent = appData.moneyPerDay;
 
         if ( appData.moneyPerDay < 100 ) {
-            levelValue.textContent = 'Низкий уровень достатка'
+            levelValue.textContent = 'Низкий уровень достатка';
         } else if ( appData.moneyPerDay > 100 && appData.moneyPerDay < 2000 ) {
             levelValue.textContent = 'Средний уровень достатка';
         } else if ( appData.moneyPerDay > 2000 ) {
