@@ -1,25 +1,36 @@
-var a = [1, 2, 2, 4, 10, 8, 6, 8, 9, 8, 6, 6]
-
-var count = Object.create(null)
-
-for (var q=0; q<a.length; ++q) {
-  if (!count[a[q]]) {
-    count[a[q]] = {i:q, n:1}
+let array = [2,3,2,4,5,12,2,3,3,3,12],
+    quantArr = {},
+    kolvoEl = 0,
+    sortArray = [];
+for (let i = 0; i < array.length; i++) {
+  let a=array[i];
+  if (quantArr[a] === undefined) {
+quantArr[a]=1;
+kolvoEl++;
   } else {
-    ++count[a[q]].n
+quantArr[a]++;
   }
 }
 
-var order = Object.keys(count).sort(function (x, y) {
-  return count[y].n - count[x].n || count[x].i - count[y].i
-})
+for (let i = 0; i < kolvoEl; i++) {
+  maxValue = 0;
+  quantityElArray = 0;
+  for (let item in quantArr) {
+    if (+quantArr[item] > maxValue) {
+      maxValue = +quantArr[item];
+      quantityElArray = +item;
+    } else {
+      if (+quantArr[item] == maxValue){
+        quantityElArray = +item;
+      }
+          
+    }  
+  }
 
-var res = []
-
-for (var q=0; q<order.length; ++q) {
-  for (var w=0; w<count[order[q]].n; ++w) {
-    res.push(+order[q])
+  delete quantArr[quantityElArray];
+  for (let i = 0; i < maxValue; i++) {
+    sortArray.push(quantityElArray);
   }
 }
 
-console.log(res.join(' '));
+console.log(sortArray);
