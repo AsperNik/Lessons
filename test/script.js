@@ -21,12 +21,11 @@ for (let i = 0; i < kolvoEl; i++) {
       quantityElArray = +item;
     } else {
       if (+quantArr[item] == maxValue){
+        if ()
         quantityElArray = +item;
       }
           
-        }
-       
-    
+    }  
   }
 
   delete quantArr[quantityElArray];

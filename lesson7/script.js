@@ -4,8 +4,6 @@ timerUpdate = setInterval(timerShow, 1000);
 
 document.body.appendChild(timer);
 
-
-
 function timerShow() {
     let time = new Date(),
     hours = time.getHours(),
