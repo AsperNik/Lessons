@@ -35,10 +35,10 @@ window.addEventListener('DOMContentLoaded', function(){
 
     // Timer
 
-    let deadline = '2018-10-21';
+    let deadline = '2019-05-04';
 
     function getTimeRemainig(endtime) {
-        let t = Date.parse(endtime) - Date.parse(new Date()),
+        let t = Date.parse(endtime) - Date.parse(new Date()) + ((new Date().getTimezoneOffset())*1000*60),
             seconds = Math.floor((t/1000) % 60 ),
             minutes = Math.floor((t/1000/60) % 60),
             hours = Math.floor((t/(1000*60*60)));
