@@ -36,21 +36,25 @@ window.addEventListener('DOMContentLoaded', function(){
     //modal windows
     let moreInfo = document.querySelectorAll('.description-btn'),
     overlay = document.querySelector('.overlay'),
-    close = document.querySelector('.popup-close');
-
-    for (let k of moreInfo) {
-        k.addEventListener('click', function () {
-            overlay.style.display = 'block';
-            this.classList.add('more-splash');
-            document.body.style.overflow = 'hidden';
-    });
-
-        close.addEventListener('click', function () {
-            overlay.style.display = 'none';
-            k.classList.remove('more-splash');
-            document.body.style.overflow = '';
+    close = document.querySelector('.popup-close'),
+    more = document.querySelectorAll('.more');
+    function modalWindow(a) {
+        for (let k of a) {
+            k.addEventListener('click', function () {
+                overlay.style.display = 'block';
+                this.classList.add('more-splash');
+                document.body.style.overflow = 'hidden';
         });
+
+            close.addEventListener('click', function () {
+                overlay.style.display = 'none';
+                k.classList.remove('more-splash');
+                document.body.style.overflow = '';
+            });
+        }
     }
+    modalWindow(moreInfo);
+    modalWindow(more);
     // Timer
 
     let deadline = '2019-05-05';
@@ -127,21 +131,7 @@ window.addEventListener('DOMContentLoaded', function(){
    
     setClock('timer', deadline);
 
-    // modal window
-
-    let more = document.querySelectorAll('.more');
-    
-    more.addEventListener('click', function () {
-        overlay.style.display = 'block';
-        this.classList.add('more-splash');
-        document.body.style.overflow = 'hidden';
-    });
-
-    close.addEventListener('click', function () {
-        overlay.style.display = 'none';
-        more.classList.remove('more-splash');
-        document.body.style.overflow = '';
-    });
+   
 });
 
 
