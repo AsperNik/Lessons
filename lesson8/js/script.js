@@ -35,14 +35,14 @@ window.addEventListener('DOMContentLoaded', function(){
 
     // Timer
 
-    let deadline = '2019-05-04';
+    let deadline = '2019-05-05';
 
     function getTimeRemainig(endtime) {
         let t = Date.parse(endtime) - Date.parse(new Date()) + ((new Date().getTimezoneOffset())*1000*60),
             seconds = Math.floor((t/1000) % 60 ),
             minutes = Math.floor((t/1000/60) % 60),
             hours = Math.floor((t/(1000*60*60)));
-            
+                     
             // Fix time < 10
             if (hours < 10) {
                 hours = '0' + hours;
@@ -83,6 +83,8 @@ window.addEventListener('DOMContentLoaded', function(){
             }
         }
     }
+
+    //Scroll
     let links = document.querySelectorAll('a[href*="#"]');
 
     for (let link of links) {
@@ -102,10 +104,10 @@ window.addEventListener('DOMContentLoaded', function(){
             block: 'start'
             });
         }
-        
       });
     }
    
     setClock('timer', deadline);
 });
+
 
