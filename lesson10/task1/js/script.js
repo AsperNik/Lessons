@@ -20,7 +20,7 @@ window.addEventListener('DOMContentLoaded', function(){
             }
     }
 
-    info.addEventListener('click', function(event) {
+    info.addEventListener('click',  (event) => {
         let target = event.target;
         if (target && target.classList.contains('info-header-tab')) {
             for (let i = 0; i < tab.length; i++) {
@@ -40,13 +40,13 @@ window.addEventListener('DOMContentLoaded', function(){
     more = document.querySelectorAll('.more');
     function modalWindow(a) {
         for (let k of a) {
-            k.addEventListener('click', function () {
+            k.addEventListener('click',  () => {
                 overlay.style.display = 'block';
                 this.classList.add('more-splash');
                 document.body.style.overflow = 'hidden';
         });
 
-            close.addEventListener('click', function () {
+            close.addEventListener('click', () => {
                 overlay.style.display = 'none';
                 k.classList.remove('more-splash');
                 document.body.style.overflow = '';
@@ -111,7 +111,7 @@ window.addEventListener('DOMContentLoaded', function(){
     let links = document.querySelectorAll('a[href*="#"]');
 
     for (let link of links) {
-        link.addEventListener('click', function (e) {
+        link.addEventListener('click', (e) => {
         e.preventDefault();
         
         const blockID = link.getAttribute('href');
