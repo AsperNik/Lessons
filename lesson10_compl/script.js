@@ -14,5 +14,5 @@ window.addEventListener("DOMContentLoaded", () => {
     }
     
         let input = document.querySelector("input");
-        input.addEventListener("input", mask, false);
+        input.addEventListener("input", mask);
     });
