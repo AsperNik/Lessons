@@ -150,7 +150,7 @@ window.addEventListener('DOMContentLoaded', function(){
     // Валидация 
     for (let i = 0; i < inputPhone.length; i++){
         inputPhone[i].addEventListener('input',() => {
-            inputPhone[i].value = inputPhone[i].value.replace(/[^0-9]/,'');
+            inputPhone[i].value = inputPhone[i].value.replace(/[^0-9+]/,'');
     });
     }
 

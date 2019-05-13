@@ -9,16 +9,9 @@ class option {
 
     newDive() {
         let div = document.createElement("div");
-        div.style.height = this.height;
-        div.style.width = this.width;
-        div.style.backgroundColor = this.bg;
-        div.style.fontSize = this.fontSize;
-        div.style.textAlign = this.textAlign;
-        div.style.color = "white";
+        div.style.cssText = `height: ${this.height}; width: ${this.width}; background-color: ${this.bg}; font-size: ${this.fontSize}; text-align: ${this.textAlign}; color: white;`;
         div.textContent = '!!!!!!!!!!!!!!!!!!!!!';
-        document.body.appendChild(div);
-        
-        
+        document.body.appendChild(div);   
     }
 }
 
