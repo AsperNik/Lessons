@@ -3,7 +3,6 @@ let inputRub = document.getElementById('rub'),
     inputUsd = document.getElementById('usd'),
     data;
 
-
 inputRub.addEventListener('input', () => {
     
     let request = new XMLHttpRequest();
@@ -14,14 +13,14 @@ inputRub.addEventListener('input', () => {
     
     function exchangeRate() {
         return new Promise(function (resolve, reject) {
-        request.addEventListener('readystatechange', function() {
-        if (request.readyState === 4) {
-            if (request.status == 200) {
-                resolve(JSON.parse(request.response));
-            } else {
-                reject();
-            }
-        }
+            request.addEventListener('readystatechange', function() {
+                if (request.readyState === 4) {
+                    if (request.status == 200) {
+                        resolve();
+                    } else {
+                        reject();
+                    }
+                }
     });
     });
 }
