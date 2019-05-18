@@ -204,6 +204,22 @@ window.addEventListener('DOMContentLoaded', function(){
 
     formExp(form);
     formExp(formContacts);
+
+    // Slider
+
+    let slideIndex = 1,
+        slides = document.querySelectorAll('.slider-item'),
+        prev = document.querySelector('.prev'),
+        next = document.querySelector('.next'),
+        dotsWrap = document.querySelector('.slider-dots'),
+        dots = document.querySelectorAll('.dot');
+
+    function showSlides(n) {
+        slides.forEach((item) => item.style.display= 'none');
+        dots.forEach((item) => item.classList.remove('dot-active'));
+        slides[slideIndex - 1].style.display = 'block';
+        dots[slideIndex - 1].classList.add('dot-active');
+    }
 });
 
 
