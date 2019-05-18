@@ -36,3 +36,6 @@ for (let i = 0; i < kolvoEl; i++) {
 
 console.log(sortArray);
 
+<input type="button" id="start" value="Start">
+<input type="button" id="stop" value="Stop">
+<input type="button" id="twist" value="Twist">

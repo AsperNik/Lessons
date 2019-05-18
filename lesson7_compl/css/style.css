@@ -1,4 +1,5 @@
 canvas {
+<<<<<<< HEAD
     background-color: #000000;
     height: 100px;
     width: 100%;
@@ -6,3 +7,10 @@ canvas {
 button {
     
 }
+=======
+    background-color: #ffffff;
+    height: 300px;
+    width: 300px;
+    border: 1px solid black;
+}
+>>>>>>> bd12dcb3222336ad5f3c2eaaa4ebfc887817e1e3
