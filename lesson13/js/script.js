@@ -276,8 +276,8 @@ window.addEventListener('DOMContentLoaded', function(){
     persons.addEventListener('input', function() {
         personsSum = +this.value;
         total = (daysSum + personsSum)*4000*koef;
-
-        if (restDays.value == '' || persons.value == '') {
+        
+        if (restDays.value == '' || persons.value == '' || restDays.value[0] == '0' || persons.value[0] == '0') {
             totalValue.innerHTML = 0;
         } else {
             totalValue.innerHTML = total;
@@ -288,7 +288,7 @@ window.addEventListener('DOMContentLoaded', function(){
         daysSum = +this.value;
         total = (daysSum + personsSum)*4000*koef;
 
-        if (persons.value == '' || restDays.value == '') {
+        if (persons.value == '' || restDays.value == '' || restDays.value[0] == '0' || persons.value[0] == '0') {
             totalValue.innerHTML = 0;
         } else {
             totalValue.innerHTML = total;
@@ -297,7 +297,7 @@ window.addEventListener('DOMContentLoaded', function(){
 
     place.addEventListener('change', function () {
         koef = this.options[this.selectedIndex].value;
-        if (restDays.value == '' || persons.value == '') {
+        if (restDays.value == '' || persons.value == '' || restDays.value[0] == '0' || persons.value[0] == '0') {
             totalValue.innerHTML = 0;
         } else {
             total = (daysSum + personsSum)*4000*koef;

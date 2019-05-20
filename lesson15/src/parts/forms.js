@@ -34,7 +34,7 @@ function forms() {
 
                     let formData = new FormData(item);
                     let obj = {};
-                    formData.forEach(function(value, key) {
+                        formData.forEach(function(value, key) {
                         obj[key] = value;
                     });
                     let json = JSON.stringify(obj);
