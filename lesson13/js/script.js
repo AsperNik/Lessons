@@ -114,8 +114,7 @@ window.addEventListener('DOMContentLoaded', function(){
         link.addEventListener('click', (e) => {
         e.preventDefault();
         
-        const blockID = link.getAttribute('href');
-        console.log(blockID);
+        const blockID = link.getAttribute('href');     
         if (blockID === '#price') {
             document.querySelector(blockID).scrollIntoView({
                 behavior: 'smooth',

@@ -1,24 +1,20 @@
-$(document).ready(function() {
+window.addEventListener('DOMContentLoaded', () => {
 
-    function animate() {
-        $('.modal').animate({
-            height: "show"
-        },2000).css('display','block');
-        $('.overlay').animate({
-            opacity: "show"
-        },3000).css('display','block');
-    }
+    'use strict';
 
-    $('.main_btna:first').click(animate);
-    $('.main_btn').click(animate);
-    $('nav li:eq(1)').click(animate);
+    let calc = require('./parts/calc.js'),
+        forms = require('./parts/forms.js'),
+        modalWindows = require('./parts/modalWindows.js'),
+        scrollW = require('./parts/scrollW.js'),
+        slider = require('./parts/slider.js'),
+        tabs = require('./parts/tabs.js'),
+        timer = require('./parts/timer.js');
 
-    $('.close').click(()=> {
-        $('.overlay').animate({
-            opacity: 'hide'
-        }, 1500);
-        $('.modal').animate({
-            height: 'hide'
-        }, 2000);
-    })
+    calc();
+    forms();
+    modalWindows();
+    scrollW();
+    slider();
+    tabs();
+    timer();
 });
