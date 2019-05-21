@@ -158,7 +158,11 @@ window.addEventListener('DOMContentLoaded', function(){
             e.preventDefault();
             item.appendChild(statusMessage);
             let input = item.getElementsByTagName('input');
-            
+            let formData = new FormData(item);
+            let obj = {};
+            formData.forEach(function(value, key) {
+                obj[key] = value;
+            });
             function sendData(data) {
 
                 return new Promise(function (resolve, reject){
@@ -166,11 +170,7 @@ window.addEventListener('DOMContentLoaded', function(){
                     request.open('POST', 'server.php');
                     request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
 
-                    let formData = new FormData(item);
-                    let obj = {};
-                    formData.forEach(function(value, key) {
-                        obj[key] = value;
-                    });
+                  
                     let json = JSON.stringify(obj);
 
                     request.send(json);

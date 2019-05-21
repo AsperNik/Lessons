@@ -24,6 +24,7 @@ function forms() {
             e.preventDefault();
             item.appendChild(statusMessage);
             let input = item.getElementsByTagName('input');
+            let formData = new FormData(item);
             
             function sendData(data) {
 
@@ -32,7 +33,7 @@ function forms() {
                     request.open('POST', 'server.php');
                     request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
 
-                    let formData = new FormData(item);
+                    
                     let obj = {};
                         formData.forEach(function(value, key) {
                         obj[key] = value;
